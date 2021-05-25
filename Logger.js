@@ -1,5 +1,5 @@
 const Logger = {
-	LIMIT: 250,
+	LIMIT: 150,
 	mode: "normal",
 	tabs: "",
 	logs: ["Logger"],
