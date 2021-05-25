@@ -1,4 +1,5 @@
 const Logger = {
+	LIMIT: 250,
 	mode: "normal",
 	tabs: "",
 	logs: ["Logger"],
@@ -53,14 +54,22 @@ const Logger = {
 					const array = thing instanceof Array;
 					
 					let length = 0;
-					for (let x in thing)
+					
+					if (array)
 					{
-						length++;
+						length = thing.length;
+					} else {
+						for (let x in thing)
+						{
+							length++;
+						}
 					}
 					
 					if (length == 0)
 					{
 						return array ? "[]" : "{}";
+					} else if (length >= Logger.LIMIT) {
+						return `Too much properties: ${length}/${Logger.LIMIT}`;
 					}
 					
 					out += `${array ? "[" : "{"}\n`;
@@ -72,7 +81,7 @@ const Logger = {
 					{
 						count++;
 						
-						out += Logger.tabs + (array ? x : `"${x}"`) + (Logger.mode == "compressed" ? ":" : ": ") + Logger.stringify(thing[x]) + (length > count ? ",\n" : "");
+						out += Logger.tabs + (array ? x : `"${x}"`) + (Logger.mode == "compressed" ? ":" : ": ") + (thing === thing[x] ? "ITSELF" : Logger.stringify(thing[x])) + (length > count ? ",\n" : "");
 					}
 					
 					Logger.tabs = Logger.tabs.replace("\t","");
@@ -85,7 +94,7 @@ const Logger = {
 					break;
 				
 				default:
-					throw `Cannot log ${thing} because it's type is ${typeof thing}.`;
+					out = thing.toString();
 					break;
 			}
 		}
