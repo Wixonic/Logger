@@ -1,5 +1,15 @@
 > A simple logger for **all** types of variables.
 
+**[GitHub](https://github.com/Wixonic/Logger/)**
+
+# Use
+
+Put this in the head of the HTML document :
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/Wixonic/Logger@1.0/Logger.min.js"></script>
+```
+
 # Variables and Functions
 
 ### `Logger.mode`
