@@ -1,6 +1,4 @@
-# Logger.js
 > A simple logger for **all** types of variables.
----
 
 ## Functions and Variables
 
