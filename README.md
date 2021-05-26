@@ -1,9 +1,48 @@
 > A simple logger for **all** types of variables.
 
-## Functions and Variables
+# Variables and Functions
 
-- `Logger.log()`: 
+### `Logger.mode`
+- **Type** : `String`
+- **Description** : The printing mode. Two possible values : `"normal"` or `"compressed"`
+- **Default** : `"normal"`
+- **Edition** : True
 
-## Issues
+### `Logger.LIMIT`
+- **Type** : `Number`
+- **Description** : The limit for the length of objects
+- **Default** : `150`
+- **Edition** : True
 
-- Don't put an object which contains itself like `window`.
+### `Logger.logs`
+- **Type** : `Array`
+- **Description** : All logs
+- **Default** : `[]`
+- **Edition** : Not Recommended
+
+### `Logger.tabs`
+- **Type** : `String`
+- **Description** : Indentation
+- **Default** : `""`
+- **Edition** : Not Recommanded
+
+---
+
+### `Logger.log()`
+- **Description** : Logs arguments in the console
+- **Arguments** : An infinity of arguments of any type
+- **Returns** : `undefined`
+
+### `Logger.getLogs()`
+- **Description** : Convert `Logger.logs` to a string
+- **Arguments** : `none`
+- **Returns** : All logs `string`
+
+### `Logger.stringify()`
+- **Description** : Convert anything to a `String`
+- **Arguments** : One, the variable to convert.
+- **Returns** : Argument `string`
+
+# Issues
+
+- Don't put an object which contains itself like `window`
