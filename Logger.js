@@ -2,7 +2,7 @@ const Logger = {
 	LIMIT: 150,
 	mode: "normal",
 	tabs: "",
-	logs: ["Logger"],
+	logs: [],
 	
 	log: (...things) => {
 		for (let x in things)
@@ -17,7 +17,6 @@ const Logger = {
 			}
 			
 			console.log(text);
-			Logger.logs++;
 		}
 	},
 	
