@@ -7,7 +7,7 @@
 Put this in the head of the HTML document :
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Wixonic/Logger@1.0.1/Logger.min.js"></script>
+<script src="https://logger.wixonic.fr/logger.min.js"></script>
 ```
 
 # Variables and Functions
