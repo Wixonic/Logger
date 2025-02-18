@@ -1,0 +1,18 @@
+{
+	"name": "@wixonic/logger",
+	"displayName": "Logger",
+	"description": "Wixonic's Logger",
+	"author": "Wixonic <contact@wixonic.fr> (https://wixonic.fr)",
+	"version": "1.0.0",
+	"license": "SEE LICENSE IN LICENSE",
+	"repository": "github:Wixonic/Logger",
+	"keywords": [
+		"log",
+		"logger"
+	],
+	"funding": {
+		"type": "patreon",
+		"url": "https://www.patreon.com/wixonic"
+	},
+	"main": "log.js"
+}
