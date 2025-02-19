@@ -3,7 +3,7 @@
 	"displayName": "Logger",
 	"description": "Wixonic's Logger",
 	"author": "Wixonic <contact@wixonic.fr> (https://wixonic.fr)",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "SEE LICENSE IN LICENSE",
 	"repository": "github:Wixonic/Logger",
 	"keywords": [
