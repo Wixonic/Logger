@@ -1,7 +1,10 @@
 # Logger
-> Wixonic's Logger
+> Wixonic's logger.
 
-[![Patreon](https://img.shields.io/badge/Patreon-black?style=flat&logo=patreon)](https://patreon.com/Wixonic)
+[![Patreon](https://img.shields.io/badge/Patreon-black?style=flat&logo=patreon)](https://patreon.com/Wixonic)<br />
+![GitHub Release](https://img.shields.io/github/v/release/Wixonic/Logger?display_name=tag&style=flat&label=Version)
+![NPM Size](https://img.shields.io/npm/unpacked-size/%40wixonic%2Flogger?style=flat&label=Size)
+![NPM Downloads](https://img.shields.io/npm/dy/%40wixonic%2Flogger?style=flat&label=Downloads)
 
 - [Support](https://github.com/Wixonic/Logger/blob/Default/.github/SUPPORT.md)
 - [Code of Conduct](https://github.com/Wixonic/Logger/blob/Default/.github/CODE_OF_CONDUCT.md)
