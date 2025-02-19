@@ -4,7 +4,7 @@
 	"description": "Wixonic's Logger",
 	"author": "Wixonic <contact@wixonic.fr> (https://wixonic.fr)",
 	"version": "1.0.1",
-	"license": "SEE LICENSE IN LICENSE",
+	"license": "Wix Non-Commercial License",
 	"repository": "github:Wixonic/Logger",
 	"keywords": [
 		"log",
