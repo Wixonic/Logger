@@ -3,7 +3,7 @@
 	"displayName": "Logger",
 	"description": "Wixonic's Logger",
 	"author": "Wixonic <contact@wixonic.fr> (https://wixonic.fr)",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "Wix Non-Commercial License",
 	"repository": "github:Wixonic/Logger",
 	"keywords": [
@@ -14,5 +14,6 @@
 		"type": "patreon",
 		"url": "https://www.patreon.com/wixonic"
 	},
-	"main": "log.js"
+	"main": "src/main.js",
+	"typings": "src/typings.d.ts"
 }
