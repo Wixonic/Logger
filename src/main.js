@@ -1,10 +1,4 @@
-/**
- * @typedef {object} Logger
- * @property {(any: ...string) => void} debug
- * @property {(any: ...string) => void} info
- * @property {(any: ...string) => void} error
- * @property {(any: ...string) => void} warn
- */
+const process = require("process");
 
 const colors = {
 	reset: "\x1b[0m",
@@ -43,22 +37,36 @@ const colors = {
 /**
  * @param {string} level
  * @param {string} color
- * @param  {...string} any
- * @returns {string}
+ * @param {Record<string, boolean>} options
+ * @param {...string} any
  */
-const rawLog = (level, color, ...any) => {
-	const now = new Date();
-	console.log(`${color}${level}${colors.reset} ${colors.dim + colors.white}${now.toLocaleDateString("fr", { day: "2-digit", month: "2-digit", year: "numeric" })} ${now.toLocaleTimeString("en", { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit", fractionalSecondDigits: 3 })}${colors.reset} ${color}${[...any].join(" ")}${colors.reset}`);
+const rawLog = (level, color, options, ...any) => {
+	const log = [];
+
+	if (options.displayLevel) log.push(color + level + colors.reset);
+
+	if (options.displayDate) {
+		const now = new Date();
+		log.push(colors.dim + colors.white +
+			now.toLocaleDateString("fr", { day: "2-digit", month: "2-digit", year: "numeric" }),
+			now.toLocaleTimeString("en", { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit", fractionalSecondDigits: 3 }) + colors.reset);
+	}
+
+	log.push(color + [...any].join(" ") + colors.reset);
+
+	process.stdout.write(log.join(" ") + "\n");
 };
 
 /**
  * @type {Logger}
  */
 const log = {
-	debug: (...any) => rawLog("[DEBUG]", colors.debug, ...any),
-	error: (...any) => rawLog("[ERROR]", colors.error, ...any),
-	info: (...any) => rawLog(" [INFO]", colors.info, ...any),
-	warn: (...any) => rawLog(" [WARN]", colors.warn, ...any)
+	debug: (...any) => rawLog("[DEBUG]", colors.debug, log, ...any),
+	error: (...any) => rawLog("[ERROR]", colors.error, log, ...any),
+	info: (...any) => rawLog(" [INFO]", colors.info, log, ...any),
+	warn: (...any) => rawLog(" [WARN]", colors.warn, log, ...any),
+	displayDate: true,
+	displayLevel: true
 };
 
 module.exports = {

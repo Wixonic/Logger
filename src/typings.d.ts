@@ -4,6 +4,7 @@ declare module "@wixonic/logger" {
 		error(...args: any[]): void;
 		info(...args: any[]): void;
 		warn(...args: any[]): void;
+		displayDate: boolean;
 	}
 
 	export const colors: {
